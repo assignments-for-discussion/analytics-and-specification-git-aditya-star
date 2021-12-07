@@ -5,7 +5,7 @@ function average(numbers) {
   if(numbers.length == 0){
     return NaN;
   }
-  for(  a=0; a<numbers.length;a++ ){
+  for( let a=0; a<numbers.length;a++ ){
       if( !Number.isNaN(numbers[a])){
         no++;
         result = result + numbers[a];
@@ -13,7 +13,7 @@ function average(numbers) {
       
   }
   result = result / no ;
-   let decimal_point = result.toString().split('.');
+   let decimalPoint = result.toString().split('.');
   var delta = 1 / Math.pow(10, decimal_point[1].length+1);
   const  res = [result, delta ];
   return res;
