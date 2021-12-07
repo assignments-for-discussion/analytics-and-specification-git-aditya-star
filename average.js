@@ -1,6 +1,22 @@
 
 function average(numbers) {
-  return numbers.reduce((p, c)=> p + c, 0) / numbers.length;
-}
+  var result=0;
+  var no =0;
+  if(numbers.length == 0){
+    return NaN;
+  }
+  for(  a=0; a<numbers.length;a++ ){
+      if( !Number.isNaN(numbers[a])){
+        no++;
+        result = result + numbers[a];
+      } 
+      
+  }
+  result = result / no ;
+   let decimal_point = result.toString().split('.');
+  var delta = 1 / Math.pow(10, decimal_point[1].length+1);
+  const  res = [result, delta ];
+  return res ;
+}   
 
 module.exports = {average};
