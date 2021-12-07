@@ -14,8 +14,8 @@ function average(numbers) {
   }
   result = result / no ;
    let decimalPoint = result.toString().split('.');
-  var delta = 1 / Math.pow(10, decimal_point[1].length+1);
-  const  res = [result, delta ];
+  //var delta = 1 / Math.pow(10, decimalPoint[1].length+1);
+  const  res = [result, 1 / Math.pow(10, decimalPoint[1].length+1) ];
   return res;
 
   
