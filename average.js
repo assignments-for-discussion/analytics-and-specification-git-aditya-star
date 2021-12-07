@@ -16,7 +16,9 @@ function average(numbers) {
    let decimal_point = result.toString().split('.');
   var delta = 1 / Math.pow(10, decimal_point[1].length+1);
   const  res = [result, delta ];
-  return res ;
+  return res;
+
+  
 }   
 
 module.exports = {average};
